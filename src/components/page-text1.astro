@@ -1,0 +1,29 @@
+---
+import Card from '../components/card.astro'
+---
+<section class="bg-newspaper-light dark:bg-newspaper-dark p-6 shadow-lg shadow-black select-none h-custom w-custom">
+    <div class="grid grid-rows-5 grid-cols-4">
+        <article class="m-2 col-start-1 row-start-1 col-span-3 row-span-1">
+            <Card/>
+        </article>
+        <article class="m-2 col-start-4 row-start-1 col-span-1 row-span-3">
+            <Card subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, amet?" descripcion='        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi rem est beatae consequatur debitis voluptates ea ex necessitatibus assumenda voluptatem mollitia eligendi ullam totam maxime eveniet,'/>
+        </article>
+        <article class="m-2 col-start-1 row-start-2 col-span-2 row-span-2">
+            <Card subtitle='Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa totam quas harum.' descripcion='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quae tempora omnis magni dignissimos ipsa. Nobis repellat, quia culpa harum perspiciatis ex voluptas iste reprehenderit! Recusandae itaque quas provident sed corrupti laboriosam et id minima? Lorem ipsum dolor.'/>
+        </article>
+        <article class="m-2 col-start-3 row-start-2 col-span-1 row-span-4">
+            <Card subtitle='Lorem ipsum dolor sit amet consectetur adipisicing elit.' descripcion='Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non, ipsam rerum soluta inventore cumque harum quas beatae corrupti, tempore consequuntur hic vero excepturi nemo doloribus blanditiis distinctio.'/>
+        </article>
+        <article class="m-2 col-start-4 row-start-4 row-span-3 col-span-1">
+            <Card title='Lorem, ipsum dolor.'/>
+        </article>
+        <article class="m-2 col-start-1 row-start-4 row-span-1 col-span-2">
+            <Card title='Lorem, ipsum dolor.'/>
+        </article>
+        <article class="m-2 col-start-1 row-start-5 row-span-1 col-span-3">
+            <Card />
+        </article>
+    </div>
+    <p class="text-xs absolute bottom-2 right-3"><slot/></p>
+</section>

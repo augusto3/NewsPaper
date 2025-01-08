@@ -1,0 +1,14 @@
+---
+interface Props{
+    title?:string;
+    subtitle?:string;
+    descripcion?:string;
+}
+const title = Astro.props.title||"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, earum.";
+const subtitle = Astro.props.subtitle;
+const descripcion = Astro.props.descripcion||"Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, fugiat assumenda? Aliquid voluptas veritatis aspernatur, quo cumque quis fuga amet temporibus voluptatum sequi ipsam natus, animi id provident at sunt illo.";
+---
+<h2 class="text-2xl text-center font-semibold px-1">{title}</h2>
+<h3 class="text-center text-xl font-medium px-1">{subtitle}</h3>
+<slot name="img" />
+<p class="">{descripcion}</p>

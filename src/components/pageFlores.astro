@@ -1,0 +1,29 @@
+---
+import Card from '../components/card.astro'
+---
+<section class="bg-newspaper-light dark:bg-newspaper-dark p-6 shadow-lg shadow-black select-none h-custom w-custom">
+    <div class="grid grid-cols-5 grid-rows-1">
+        <article class="p-2 col-start-1 row-start-1 col-span-3 row-span-1 h-[650px]">
+            <Card subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti." descripcion="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse quas vero ad saepe itaque voluptatibus architecto quaerat similique quod nesciunt aperiam tempora neque adipisci cum ullam eum quibusdam, distinctio in voluptate? Fugit consequatur voluptatibus placeat dolor libero? Minus minima delectus.">
+                <img slot="img" src="src/assets/flores.avif" class="w-4/6 m-auto h-2/4">
+            </Card>
+        </article>
+        <div class="w-full h-full col-start-4 col-span-2">
+            <article class="p-4 row-start-1" >
+                <Card subtitle="Lorem ipsum dolor, sit amet consectetur adipisicing elit." descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nulla eligendi nemo error aperiam officiis nesciunt expedita distinctio harum vitae."/>
+            </article>
+            <article class="p-4 row-start-2">
+                <Card descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nulla eligendi nemo error aperiam officiis nesciunt expedita distinctio harum vitae."/>
+            </article>
+        </div>
+    </div>
+    <div class="grid grid-rows-1 grid-cols-2" >
+        <article class="m-2 col-span-1 col-start-1 row-start-1 row-span-1">
+            <Card subtitle='Lorem ipsum dolor sit amet consectetur adipisicing elit.'/>
+        </article>
+        <article class="m-2 col-span-1 col-start-2 row-start-1 row-span-1">
+            <Card descripcion="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed explicabo vero, libero fuga culpa laboriosam, commodi laudantium repellendus veritatis voluptatum voluptas quam quos cupiditate sint exercitationem? Porro, fuga. Quo, vel?. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident, suscipit?"/>
+        </article>
+    </div>
+    <p class="text-xs absolute bottom-2 right-3"><slot/></p>
+</section>

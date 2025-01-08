@@ -1,0 +1,11 @@
+---
+interface Props{
+    title:string;
+}
+const [title, fecha] = [Astro.props.title, '30 de noviembre de 2024 Bs. As. Argentina'];
+---
+<article class="border-b-2 border-b-neutral-950">
+    <p class="text-xs">{fecha}</p>
+    <h1 class="text-center text-5xl font-extrabold font-title m-2">{title}</h1>
+    <br>
+</article>

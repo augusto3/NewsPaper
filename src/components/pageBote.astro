@@ -1,0 +1,25 @@
+---
+import Header from "../components/header.astro";
+import Card from "../components/card.astro";
+---
+
+<section class="bg-newspaper-light dark:bg-newspaper-dark p-6 shadow-lg shadow-black select-none">
+    <Header title="NewsPaper" />
+    <article class="m-2">
+        <Card subtitle="Lorem ipsum dolor sit, amet consectetur adipisicing elit." descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex laborum, aperiam recusandae voluptatem dicta optio, vitae nulla nobis reiciendis voluptatum labore">
+            <img slot="img" class="m-auto w-3/5 h-auto py-1" src="../../src/assets/bote.jpg"/>
+        </Card>
+    </article>
+    <div class="grid grid-rows-1 grid-cols-2">
+        <article class="m-2 col-span-1 col-start-1 row-start-1 row-span-1">
+            <Card />
+        </article>
+        <article class="m-2 col-span-1 col-start-2 row-start-1 row-span-1">
+            <Card />
+        </article>
+    </div>
+    <article class="m-2 col-span-2 col-start-1 row-span-1 row-start-3">
+        <Card />
+    </article>    
+    <p class="text-xs absolute bottom-2 right-3"><slot/></p>
+</section>

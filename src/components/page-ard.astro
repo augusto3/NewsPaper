@@ -1,0 +1,27 @@
+---
+import Card from '../components/card.astro'
+---
+<section class="bg-newspaper-light dark:bg-newspaper-dark p-6 shadow-lg shadow-black select-none h-custom w-custom">
+    <div class="grid grid-rows-5 grid-cols-5">
+        <article class="m-2 col-span-3 col-start-1 row-start-1 row-span-5">
+            <Card descripcion='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure dignissimos nam fugit illo temporibus reprehenderit quos odio quam nobis ipsum facilis debitis necessitatibus fugiat praesentium unde laudantium, provident, veniam labore ab non consectetur? Possimus, recusandae.' subtitle='Lorem ipsum dolor sit amet'>
+                <img slot="img" src="src/assets/ard.jpg" class="py-3 px-4">
+            <Card/>
+        </article>
+        <article class="m-2 col-span-2 col-start-4 row-start-1 row-span-3">
+            <Card title='Lorem ipsum dolor, sit amet consectetur adipisicing.'subtitle='Lorem ipsum dolor sit amet.' descripcion='Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe qui optio vel deserunt dolor repellendus quia pariatur, exercitationem maiores modi est accusantium? Blanditiis asperiores.'/>
+        </article>
+        <article class="m-2 col-span-2 col-start-4 row-start-3 row-span-3">
+            <Card subtitle='Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ratione quam vel.'></Card>
+        </article>
+    </div>
+    <div class="grid grid-rows-1 grid-cols-3" >
+        <article class="m-2 col-span-2 col-start-1 row-start-1 row-span-1">
+            <Card subtitle='Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quaerat perferendis voluptas facere ipsa ex cum' descripcion='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta consequuntur culpa reprehenderit, quis iste sint quas et ratione beatae? Error dignissimos ducimus dicta fugit suscipit quod repellendus aut aspernatur voluptas sit expedita velit nisi, voluptate unde, pariatur autem, iusto magnam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, adipisci.'/>
+        </article>
+        <article class="m-2 col-span-1 col-start-3 row-start-1 row-span-1">
+            <Card title="Lorem ipsum dolor sit." subtitle='Lorem ipsum dolor sit, amet consectetur adipisicing elit.' descripcion='Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste id consectetur sint quos illum magnam repellat accusantium non culpa amet!'/>
+        </article>
+    </div>
+    <p class="text-xs absolute bottom-2 right-3"><slot/></p>
+</section>

@@ -1,0 +1,84 @@
+---
+    import Layout from "../layouts/Layout.astro";
+    import DarkMode from "../components/dark-mode.astro";
+    import LeafPage from "../components/page-leaf.astro";
+    import PageText1 from "../components/page-text1.astro"
+    import PageText2 from "../components/page-text2.astro"
+    import PagePC from "../components/pagePC.astro";
+    import PageFlores from "../components/pageFlores.astro";
+    import PageBote from "../components/pageBote.astro";
+    import PageArd from "../components/page-ard.astro";
+    import PageMusic from "../components/page-music.astro";
+---
+<Layout title="NewsPaper">
+	<div class="bg-slate-300 dark:bg-orange-200 overflow-hidden h-full w-full">
+        <div class="newspaper centered scale-50 pt-10 relative" id="NewsPaper">
+            <div class="leaf absolute h-full w-6/12 left-2/4">
+                <div class="page front external h-custom w-custom absolute">
+                     <PageBote>1</PageBote>
+                </div>
+                <div class="page back h-custom w-custom absolute">
+                    <PageMusic>2</PageMusic>
+                </div>
+            </div>
+            <div class="leaf absolute h-full w-6/12 left-2/4">
+                <div class="page front h-custom w-custom absolute">
+                    <PagePC>3</PagePC>
+                </div>
+                <div class="page back h-custom w-custom absolute">
+                    <PageText1>4</PageText1>
+                </div>
+            </div>
+            <div class="leaf absolute h-full w-6/12 left-2/4">
+                <div class="page front h-custom w-custom absolute">
+                    <PageFlores>5</PageFlores>
+                </div>
+                <div class="page back h-custom w-custom absolute">
+                    <PageArd>6</PageArd>
+                </div>
+            </div>
+            <div class="leaf absolute h-full w-6/12 left-2/4">
+                <div class="page front h-custom w-custom absolute">
+                    <LeafPage>7</LeafPage>
+                </div>
+                <div class="page back external h-custom w-custom absolute">
+                    <PageText2>8</PageText2>
+                </div>
+            </div>
+        </div>
+        <div class="justify-center p-2 fixed bottom-0 inline-flex w-screen h-20 my-auto bg-opacity-80 bg-black">
+            <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-2 py-1 my-auto rounded-md disabled:bg-gray-200 disabled:text-gray-400 disabled:select-none disabled:opacity-60 w-14 h-10" id="backpage">
+                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"	stroke="currentColor" class="w-12 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path>
+                </svg>
+            </button>
+            <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-2 py-1 my-auto mx-2 rounded-md disabled:bg-gray-200 disabled:text-gray-400 disabled:select-none disabled:opacity-60 w-14 h-10" id="nextpage">
+                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
+                </svg>
+            </button>
+        </div>
+        <DarkMode></DarkMode>
+    </div>
+</layout>
+<style is:global>
+    .newspaper{
+        transform-style: preserve-3d;
+        perspective: 1000px;
+    }
+    .newspaper .leaf{
+        transform-style: preserve-3d;
+        transition: transform 1s;
+        transform: rotate3d(0,1,0,0deg);
+        transform-origin: left 0px;
+    }
+    .newspaper .leaf .page{
+        transform-style: preserve-3d;
+    }
+    .newspaper .leaf .page.front{
+        transform: rotate3d(0,1,0,0deg) translate3d(0,0,0.1px);
+    }
+    .newspaper .leaf .page.back{
+        transform: rotate3d(0,1,0,180deg) translate3d(0,0,0.1px);
+    }
+</style>

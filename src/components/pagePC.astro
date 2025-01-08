@@ -1,0 +1,28 @@
+---
+import Card from '../components/card.astro'
+---
+<section class="bg-newspaper-light dark:bg-newspaper-dark p-6 shadow-lg shadow-black select-none h-custom w-custom">
+    <div class="grid grid-rows-2 grid-cols-3">
+        <article class="m-1 col-span-2 col-start-1 row-start-1 row-span-2">
+            <Card subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur eligendi laborum optio!" descripcion='Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic reiciendis molestiae nisi voluptatibus consectetur enim in obcaecati quis! Mollitia quis iste veniam debitis quam corrupti at, explicabo illo accusantium aliquid soluta repellendus voluptatibus exercitationem rerum quisquam praesentium nihil ipsum nam.'>
+                <img slot="img" src="src/assets/pc.jpg" class="w-full py-3 px-4">
+            </Card>
+        </article>
+        <article class="m-1 col-span-2 col-start-3 row-start-1 row-span-2">
+            <Card subtitle='Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, amet?'descripcion='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam quibusdam distinctio dolore dolorem sit sapiente repellendus? Facere dolore delectus ut? Quo voluptas officiis assumenda harum consequatur ipsum, at facilis nobis voluptatibus. Voluptatem fuga nostrum, quibusdam ea temporibus repellendus minus, accusantium eos totam adipisci inventore porro nesciunt. A, magni. Accusamus dicta ut vero optio. Doloribus earum '>
+            </Card>
+        </article>
+    </div>
+    <div class="grid grid-rows-2 grid-cols-3" >
+        <article class="m-1 col-span-2 col-start-1 row-start-1 row-span-1">
+            <Card />
+        </article>
+        <article class="m-1 col-span-2 col-start-1 row-start-2 row-span-1">
+            <Card />
+        </article>
+        <article class="m-1 col-span-1 col-start-3 row-start-1 row-span-2">
+            <Card />
+        </article>
+    </div>
+    <p class="text-xs absolute bottom-2 right-3"><slot/></p>
+</section>
